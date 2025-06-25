@@ -45,7 +45,7 @@ In /pathinference_Fig6/ we showcase how to perform inference using our path infe
 
 # Contributors
 
-Matthias Häring - Göttingen Campus Insitute For Dynamics Of Biological Networks
+Matthias Häring - Göttingen Campus Institute For Dynamics Of Biological Networks
 
 Nicolas Lenner - Institute For Advanced Study, Princeton
 
