@@ -34,7 +34,7 @@ class generatePowerEnsemble(object):
 
     def run(self):
         ###########################################      
-        os.system('./src_5_pureFwdPowerlaw_notrj/prog %f %d %d %f %f %f %d %d %d %d %f %f %f %f %f' % (
+        os.system('./generateTSAtrajectories/prog %f %d %d %f %f %f %d %d %d %d %f %f %f %f %f' % (
         self.x_start_sim,self.nrealiz,self.seed,self.dt,self.D,
         self.x0_for_reverse,self.total_time,self.wfreq,
         self.traFreq,self.max_rtime,self.x_upper_bound,
