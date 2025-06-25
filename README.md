@@ -1,8 +1,6 @@
 # InferenceParadoxInCollapsingDynamics
 
-Code for our manuscript "Inferring the Dynamics of Collapse". 
-
-Authors: Nicolas Lenner, Stephan Eule, Jörg Großhans, Fred Wolf and Matthias Häring
+Code for paper "Inferring the Dynamics of Collapse" by Nicolas Lenner, Stephan Eule, Jörg Großhans, Fred Wolf and Matthias Häring
 
 # Prerequisites
 python dependencies:
