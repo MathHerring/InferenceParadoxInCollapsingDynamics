@@ -28,7 +28,7 @@ Alternatively /pathinference_Fig6/Paperplots_Examplemodels_TrajectoriesANDinfere
 
 **Theory figures**
 
-Code for the Feller boundary classification plots, as well as code comparing reverse time theory with numerical simulations is given in /FellerClassification_Fig3/ and /TSAtheory_Fig4/
+Code for the Feller boundary classification plots, as well as code comparing reverse time theory with numerical simulations is given in /FellerClassification_Fig3/ and /TSAtheory_Fig4/. Only data file missing are the raw trajectories which must be generated with the code in /generateTSAensemble/. 
 
 **Phasetransition**
 
