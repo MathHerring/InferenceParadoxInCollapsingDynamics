@@ -1,8 +1,6 @@
 # InferenceParadoxInCollapsingDynamics
 
-Code for our manuscript "Inferring the Dynamics of Collapse". 
-
-Authors: Nicolas Lenner, Stephan Eule, Jörg Großhans, Fred Wolf and Matthias Häring
+Code for paper "Inferring the Dynamics of Collapse" by Nicolas Lenner, Stephan Eule, Jörg Großhans, Fred Wolf and Matthias Häring
 
 # Prerequisites
 python dependencies:
@@ -36,7 +34,7 @@ Code for the Feller boundary classification plots, as well as code comparing rev
 
 Scripts for both entropy and squared coefficient of variation phasediagrams is given in /phasetransition_Fig5/ inlcuding most of the data needed to reproduce the plots. The scripts for cv and entropy generally only generate one datapoint of the respective diagram and have been evaluated on the cluster. 
 
-The required trajectory data can be generated using the code given in /generateTSAensemble/.
+The required trajectory data can be generated using the code given in GenerateTrajectories.py or alternatively with the code in /generateTSAensemble/.
 
 **Reverse time inference**
 
@@ -45,7 +43,7 @@ In /pathinference_Fig6/ we showcase how to perform inference using our path infe
 
 # Contributors
 
-Matthias Häring - Göttingen Campus Insitute For Dynamics Of Biological Networks
+Matthias Häring - Göttingen Campus Institute For Dynamics Of Biological Networks
 
 Nicolas Lenner - Institute For Advanced Study, Princeton
 
