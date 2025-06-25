@@ -34,7 +34,7 @@ Code for the Feller boundary classification plots, as well as code comparing rev
 
 Scripts for both entropy and squared coefficient of variation phasediagrams is given in /phasetransition_Fig5/ inlcuding most of the data needed to reproduce the plots. The scripts for cv and entropy generally only generate one datapoint of the respective diagram and have been evaluated on the cluster. 
 
-The required trajectory data can be generated using the code given in /generateTSAensemble/.
+The required trajectory data can be generated using the code given in GenerateTrajectories.py or alternatively with the code in /generateTSAensemble/.
 
 **Reverse time inference**
 
