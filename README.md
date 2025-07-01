@@ -62,9 +62,42 @@ Each filename encodes the parameter values used for traceability.
 - This script is a wrapper for simulation workflows and does not perform the simulations internally—ensure the C code and its outputs are present.
 - To extend for other parameter sets, edit the arrays at the top of the script.
 
-**Simulation based inference**
+# Simulation based inference
 
 /sbi_Fig2/ contains scripts for training SBI estimators as well as code for plotting and prediction. We also combine nested sampling with the sbi-likelihood estimator to compute the evidence. Pretrained estimators for likelihood and posterior are included.
+
+**Summary of Code and Usage Instructions**
+
+This script performs parameter inference on stochastic process models using simulation-based inference (SBI). It uses externally compiled C++ code for simulating time series, loads results, and visualizes posterior distributions of model parameters.
+
+### How to Use
+
+1. **Requirements**:
+   - Python 2 (code is Python 2 compatible, not Python 3 by default).
+   - Libraries: `numpy`, `torch`, `matplotlib`, `seaborn`, `sbi`, `dynesty`, and available C++ simulation binary.
+   - C++ simulation binary must be in `./generateTSAtrajectories/prog` and produce `num_mean.txt`, `num_var.txt`.
+
+2. **Edit Parameters** *(optional)*:
+   - Modify simulation settings (e.g., prior ranges, simulation time, or `true_params`) as needed.
+
+3. **Run the Script**:
+   - Execute via terminal:  
+     ```
+     python yourscript.py
+     ```
+   - Ensure all paths (C++ program, data files, posterior pickle) are correct.
+
+4. **Results**:
+   - Pairplots of posterior samples are saved as PDF and PNG files (e.g., `pairplot_WF.png`).
+
+**Note:**  
+- To perform new inference/training, you must generate a new posterior with SBI (`posterior__TSAalpbet_Nens5000_Ntrain10000_dt0005_untiltau02.pkl`).
+- For medical or biological questions about the models, consult an expert.
+
+**TL;DR:**
+- Runs a C++ simulation for a stochastic model.
+- Performs parameter inference using summary statistics and a pre-trained SBI posterior.
+- Plots and saves posterior distributions for reproducibility or analysis.
 
 **Theory figures**
 
