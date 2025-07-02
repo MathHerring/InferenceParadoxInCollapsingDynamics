@@ -12,36 +12,36 @@ python dependencies:
 - dynesty
 - sbi
 - sdeint
+- torch
 
 
 # Contents
 
-We organized this repository in separate directories according to the figures in the manuscript. Each directory contains its own README.md which documents the code used for the analysis.
+We organized this repository in separate directories according to the figures in the manuscript. **Each directory contains its own README.md which documents the code used for the analysis.**
 
 **Generating trajectories**
 
-TSA trajectories can be generated using our C code - wrapped in python - in the folder /generateTSAensemble/
-
-Alternatively /pathinference_Fig6/Paperplots_Examplemodels_TrajectoriesANDinference.ipynb contains native (much slower) python code.
+/generateTSAensemble/ contains the code to generate TSA trajectories (raw data) using our C code - wrapped in a python script
 
 
 **Simulation based inference**
 
 /sbi_Fig2/ contains scripts for training SBI estimators as well as code for plotting and prediction. We also combine nested sampling with the sbi-likelihood estimator to compute the evidence. Pretrained estimators for likelihood and posterior are included.
 
+
 **Theory figures**
 
-Code for the Feller boundary classification plots, as well as code comparing reverse time theory with numerical simulations is given in /FellerClassification_Fig3/ and /TSAtheory_Fig4/. Only data file missing are the raw trajectories which must be generated with the code in /generateTSAensemble/. 
+Code for the Feller boundary classification plots, as well as code comparing reverse time theory with numerical simulations is given in /FellerClassification_Fig3/ and /TSAtheory_Fig4/. 
+
 
 **Phasetransition**
 
-Scripts for both entropy and squared coefficient of variation phasediagrams is given in /phasetransition_Fig5/ inlcuding most of the data needed to reproduce the plots. The scripts for cv and entropy generally only generate one datapoint of the respective diagram and have been evaluated on the cluster. 
+Scripts for analyzing both entropy and squared coefficient of variation phasediagrams is given in /phasetransition_Fig5/ inlcuding all of the data needed to reproduce the plots. We include detailed instructions and scripts to generate the raw data.
 
-The required trajectory data can be generated using the code given in GenerateTrajectories.py or alternatively with the code in /generateTSAensemble/.
 
 **Reverse time inference**
 
-In /pathinference_Fig6/ we showcase how to perform inference using our path inference formalism based on the reverse time theoretical framwork.
+In /pathinference_Fig6/ we showcase how to perform inference using our path inference formalism based on the reverse time TSA theory.
 
 
 # Contributors
