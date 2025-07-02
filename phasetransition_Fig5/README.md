@@ -32,7 +32,8 @@ This example bash script specifies
 - the number of jobs (corresponding to the number of parameter combinations, here 961)
 - then the arrays of the parameters we used to calculate the phasediagrams
 - finally the call of the python script
-To understand the arguments of the python call, have a look at the comments in the respective script. The only prerequisite for running all analysis is that the path to the pre-generated trajectories is given (naturally the trajectories must have been generated with the same parameters as here and save according to the naming convection - see specific python script for details).
+
+To understand the arguments of the python call, have a look at the comments in the respective script. The only prerequisite for running all analysis is that the path to the pre-generated trajectories is given (naturally the trajectories must have been generated with the same parameters as here and saved according to the naming convection - see specific python script for details).
 ```
 #SBATCH -a 0-960 #=num of jobs - 1 #This determines SLURM_ARRAY_TASK_ID
 
