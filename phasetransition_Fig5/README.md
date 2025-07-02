@@ -10,6 +10,7 @@ and
 ```
 Analysis_CV_and_EvidencePhasetransition.ipynb
 ```
+Both jupyter notbeooks contain all the plotting routines to replicate the figures of our manuscript. They also provide functions that cast our analytical results into python code for numerics-theory comparison.
 
 ## How to get the raw data
 
@@ -41,17 +42,18 @@ arr_gamma=(0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1
 
 arr_beta=(-2.0 -1.9 -1.8 -1.7 -1.6 -1.5 -1.4 -1.3 -1.2 -1.1 -1.0 -0.9 -0.8 -0.7 -0.6 -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0)
 
-LambdaLength=31
+NumberOfParameters=31
 
-python cluster_compute_entropy.py /directory/to/trajectory/data/ /directory/to/save/entropy/results/ covariance ${arr_alpha[$(($SLURM_ARRAY_TASK_ID/$LambdaLength))]} ${arr_beta[$(($SLURM_ARRAY_TASK_ID%$LambdaLength))]} 1.0 0.2 0.0005 2000 0.1
+python cluster_compute_entropy.py /directory/to/trajectory/data/ /directory/to/save/entropy/results/ covariance ${arr_alpha[$(($SLURM_ARRAY_TASK_ID/$NumberOfParameters))]} ${arr_beta[$(($SLURM_ARRAY_TASK_ID%$NumberOfParameters))]} 1.0 0.2 0.0005 2000 0.1
 ```
 For the CV, an example including arguments is
 ```
-python cluster_compute_cv.py /directory/to/trajectory/data/ /directory/to/save/entropy/results/ ${arr_alpha[$(($SLURM_ARRAY_TASK_ID/$LambdaLength))]} 0 ${arr_gamma[$(($SLURM_ARRAY_TASK_ID%$LambdaLength))]} 0.2 0.0005 2000 0.01
+python cluster_compute_cv.py /directory/to/trajectory/data/ /directory/to/save/entropy/results/ ${arr_alpha[$(($SLURM_ARRAY_TASK_ID/$NumberOfParameters))]} 0 ${arr_gamma[$(($SLURM_ARRAY_TASK_ID%$NumberOfParameters))]} 0.2 0.0005 2000 0.01
 ```
 
 For the Evidence, an example including arguments is
 ```
-python cluster_compute_evidencefromNS.py /directory/to/trajectory/data/ /directory/to/save/evidence/results/ random_walk ${arr_alpha[$(($SLURM_ARRAY_TASK_ID/$LambdaLength))]} ${arr_beta[$(($SLURM_ARRAY_TASK_ID%$LambdaLength))]} 1.0 0.2 0.0005 2000
+python cluster_compute_evidencefromNS.py /directory/to/trajectory/data/ /directory/to/save/evidence/results/ random_walk ${arr_alpha[$(($SLURM_ARRAY_TASK_ID/$NumberOfParameters))]} ${arr_beta[$(($SLURM_ARRAY_TASK_ID%$NumberOfParameters))]} 1.0 0.2 0.0005 2000
 ```
+To obtain the difference of the log-evidence between the "free-$\gamma$" and "pure diffusion" models, the evidence script must be executed twice - with the "random_walk" and "general_force" arguments respectively.
 
