@@ -49,7 +49,7 @@ This script trains a neural posterior estimator for parameter inference using SB
 
 3. **Run the Script**
    ```
-   python SimulationBasedInference_evidence_alphabetaFIXED_savinglikelihood.py
+   python SimulationBasedInference_posterior_saving.py
    ```
    - Ensure that the C program path is correct and it writes the expected files.
 
